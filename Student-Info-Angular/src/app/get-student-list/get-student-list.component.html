@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/app-create-student" class="nav-link"> Create-Student</a>
+        </li> 
+        <!-- <li class =" navbar-list">
+        <a routerLink ="/update" class="nav-link"> update</a>
+        </li> -->
+        </ul>
+</nav>
+<br>
+<div style="margin-left: 80px; margin-right: 50px; margin-top: 30px;">
+    <h2 class="abc"> Student- List !!! </h2>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>StudentID</th>
+                <th>StudentName</th>
+                <th>RollNo</th>
+                <th>DOB</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of allData">
+                <td>{{t.studentId}}</td> 
+                <td>{{t.studentName}}</td> 
+                <td>{{t.studentRollNo}}</td>
+                <td>{{t.studentDOB}}</td>
+                <td>{{t.studentAddress}}</td> 
+                <td>
+                    <button (click) = "updStudent(t)" class = "btn btn-info">update</button>
+                    
+                   
+                    <button (click) = "deStudent(t.studentId)" class = "btn btn-danger" style = "margin-left: 10px"> Delete </button>
+                </td>           
+            </tr>
+        </tbody>
+    </table>

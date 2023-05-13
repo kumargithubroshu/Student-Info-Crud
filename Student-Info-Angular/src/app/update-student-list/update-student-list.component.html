@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-4">
+    <h2 style="margin-left: 10%; color: coral;">Update Student</h2>
+    <form [formGroup]="updateStudent" (ngSubmit) = "update()">
+    
+        <div class="mb-3">
+             <input type="text" class="form-control" id="studentId" formControlName="studentId" placeholder="studentID">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="studentName" formControlName="studentName" placeholder="studentName">
+       </div>
+        
+        <div class="mb-3">
+             <input type="text" class="form-control" id="studentRollNo" formControlName="studentRollNo" placeholder="studentRollNo">
+        </div>
+    
+        <div class="mb-3">
+             <input type="text" class="form-control" id="studentDOB" formControlName="studentDOB" placeholder="studentDOB">
+        </div>
+    
+        <div class="mb-3">
+             <input type="text" class="form-control" id="studentAddress" formControlName="studentAddress" placeholder="studentAddress">
+        </div>
+        <button class="btn btn-success" type = "submit">Submit</button>
+    </form>
+    </div>
+
